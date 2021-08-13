@@ -27,6 +27,7 @@ Fully supervised 3D human pose estimation methods는 크게 2가지로 나뉜다
 
 ## Temporal Supervision
  Temporal information은 occlusion이나 jittery 문제를 해결할수 있게 이전과 미래 human motion 정보를 제공한다.  
+ 
  - [3] : [Exploiting temporal context for 3d human pose estimation in the wild](https://openaccess.thecvf.com/content_CVPR_2019/papers/Arnab_Exploiting_Temporal_Context_for_3D_Human_Pose_Estimation_in_the_CVPR_2019_paper.pdf) - IEEV 2019    
  - [7] : [3d human pose estimation in video with temporal convolutions and semi-supervised training](https://openaccess.thecvf.com/content_CVPR_2019/papers/Pavllo_3D_Human_Pose_Estimation_in_Video_With_Temporal_Convolutions_and_CVPR_2019_paper.pdf) - CVPR 2019  
  - [11] : [Occlusion-aware networks for 3d human pose estimation in video](https://openaccess.thecvf.com/content_ICCV_2019/papers/Cheng_Occlusion-Aware_Networks_for_3D_Human_Pose_Estimation_in_Video_ICCV_2019_paper.pdf) - ICCV 2019  
@@ -36,6 +37,8 @@ Fully supervised 3D human pose estimation methods는 크게 2가지로 나뉜다
  - 
 A long short-term memory (LSTM) sequence to sequence method는 video에서 temporal information을 사용하기를 제안하고 2D pose의 sequence에서부터 3D pose sequence를 predict한다.  
 Sequence to sequence pose models는 drift하기 쉬운것을 보여준다.  
+
+ [7]은 re-projection loss를 이용하여 semi-supervised training을 위해 temporal convolution network를 이용한다. 그러나 그것들의 re-projection scheme는 root trajectory를 estimate하는것을 요구한다. video에서 root trajectory를 estimating하는것은 어려운 task이다. 그러므로 그들은 small set of 3D annotations를 training 초기에 요구한다.  
 [30]은 long sequences에서 drift에 robust하는 long history information을 이용하기 위해 확장된(dilated) convolutional network를 제안한다.
 [17]은 또한 GRU encoder를 convolutional layers에 의해 생성된 pose information의 sequence를 encode하기 위해 사용한다.  
 
@@ -73,6 +76,7 @@ depth를 estimation하기 위해, 모든 views로부터 estimated된 3D pose는 
 간단히 multi-view estimated 3D poses사이의 loss를 사용하는것 대신에, [39]는 re-projected 2D poses 간의 loss를 정의한다.  
 3D에서 multi-view consistency를 비교하면, multi-view re-projection to 2D는 view-consistency enforcing에 더욱 유망함을 보여준다.  
 
+모두 multi-view consistency를 이용한 방법이다
 
 3D annotations의 부재에서, 정확한 2D poses는 정확한 multi-view re-projection에 아주 중요하다. Occluded body parts는 degenerated solutions로 이끈다. 그러므로 temporal lifting network를 사용하여 2D keypoints의 sequence로 부터 정보를 encode한다.  
 
