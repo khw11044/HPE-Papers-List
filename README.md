@@ -87,4 +87,6 @@ EpipolarPose[18]과 유사하게, 본 논문은 lifting network를 train하기�
  - [Weakly-supervised discovery of geometry-aware representation for 3d human pose estimation](https://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_Weakly-Supervised_Discovery_of_Geometry-Aware_Representation_for_3D_Human_Pose_Estimation_CVPR_2019_paper.pdf) - CVPR 2019  
 
  - [Repnet: Weakly supervised training of an adversarial reprojection network for 3d human pose estimation](https://openaccess.thecvf.com/content_CVPR_2019/papers/Wandt_RepNet_Weakly_Supervised_Training_of_an_Adversarial_Reprojection_Network_for_CVPR_2019_paper.pdf) - CVPR 2019   
- - [Temporal hockey action recognition via pose and optical flows](https://openaccess.thecvf.com/content_CVPRW_2019/papers/CVSports/Cai_Temporal_Hockey_Action_Recognition_via_Pose_and_Optical_Flows_CVPRW_2019_paper.pdf) - CVPR Workshops 2019  
+ - [Temporal hockey action recognition via pose and optical flows](https://openaccess.thecvf.com/content_CVPRW_2019/papers/CVSports/Cai_Temporal_Hockey_Action_Recognition_via_Pose_and_Optical_Flows_CVPRW_2019_paper.pdf) - CVPR Workshops 2019 
+
+ - [Distill knowledge from nrsfm for weakly supervised 3d pose learning](https://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Distill_Knowledge_From_NRSfM_for_Weakly_Supervised_3D_Pose_Learning_ICCV_2019_paper.pdf) – ICCV 2019 
